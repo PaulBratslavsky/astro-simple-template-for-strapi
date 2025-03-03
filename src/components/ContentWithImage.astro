@@ -1,0 +1,20 @@
+---
+const { reverse } = Astro.props;
+---
+
+<section>
+  <div class="py-20 bg-gray-50 radius-for-skewed">
+    <div class="container mx-auto px-4">
+      <div class={`mb-8 flex gap-4 ${reverse ? 'flex-row-reverse' : ''}`}>
+        <div class="w-full lg:w-1/2 ">
+          <img class="object-cover" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=968&q=80" alt=""/>
+        </div>
+        <div class="w-full lg:w-1/2 py-6 lg:pt-10 px-6 rounded-r bg-white">
+          <h2 class="my-4 text-2xl font-bold">Morbi scelerisque nulla et lectus dignissim eleifend nulla eu nulla a metus</h2>
+          <p class="mb-4 text-gray-400 leading-loose">Quisque id sagittis turpis. Nulla sollicitudin rutrum eros eu dictum. Integer sit amet erat sit amet lectus lacinia mattis. Donec est tortor, fermentum at urna a, accumsan suscipit sem.</p>
+          <a class="text-green-600 hover:text-green-700 font-bold" href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

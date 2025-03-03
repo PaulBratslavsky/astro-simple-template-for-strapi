@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import CardsRow from "../components/CardsRow.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import CardsStack from "../components/CardsStack.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import Signup from "../components/Signup.astro";
+import Faq from "../components/Faq.astro";
+import ContentWithImage from "../components/ContentWithImage.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <div slot="callout" class="callout">Top Call Out</div>
+  <Hero />
+  <SectionHeading />
+  <CardsRow />
+  <ContentWithImage reverse={true} />
+  <ContentWithImage reverse={false} />
+  <SectionHeading />
+  <CardsStack />
+  <About />
+  <Faq />
+  <Signup />
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .callout {
+    background-color: #00a63e;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+</style>
